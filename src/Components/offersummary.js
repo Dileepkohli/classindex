@@ -2,10 +2,17 @@ import React, { Component } from 'react'
 import { Paper, TextField } from '@mui/material'
 import {HiArrowLongRight} from 'react-icons/hi2'
 import {HiArrowLongLeft} from 'react-icons/hi2'
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
-export default class offersummary extends Component {
-  render() {
+export default function offersummary () {
+
+    const navigate = useNavigate();
+
+    const backwards = () =>{
+        navigate('/creditscore')
+    }
+
     return (
       <div>
         <div className='row'>
@@ -31,7 +38,7 @@ export default class offersummary extends Component {
                     </div> 
                 </Paper><br/>
                     <div className='p-3 pt-5 d-flex' style={{marginRight:0}}>
-                        <button className='btn btn-outline-primary ms-auto ' style={{borderRadius:20,width:100,textDecoration:'none'}}><HiArrowLongLeft/><Link to='' className='text-decoration-none '>Back</Link></button>
+                        <button onClick={backwards} className='btn btn-outline-primary ms-auto ' style={{borderRadius:20,width:100,textDecoration:'none'}}><HiArrowLongLeft/><Link  className='text-decoration-none '>Back</Link></button>
                         <button className='btn btn-primary ms-4' style={{borderRadius:20,width:100}}><Link to='/congratulations' className='text-white text-decoration-none'>Next</Link> <HiArrowLongRight/></button>
                     </div><p className='p-1'></p>
                 </div>
@@ -39,4 +46,4 @@ export default class offersummary extends Component {
       </div>
     )
   }
-}
+

@@ -14,8 +14,8 @@ import TimelineContent from '@mui/lab/TimelineContent';
 import TimelineDot from '@mui/lab/TimelineDot';
 import { Link } from 'react-router-dom';
 
-export default class travel extends Component {
-  render() {
+export default function travel () {
+  
     return (
       <div className='row'>
         <div className='col-md-4 dream'>
@@ -86,4 +86,4 @@ export default class travel extends Component {
       </div>
     )
   }
-}
+

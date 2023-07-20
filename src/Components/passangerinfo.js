@@ -17,18 +17,16 @@ import {SlCalender} from 'react-icons/sl';
 import {HiArrowLongRight} from 'react-icons/hi2'
 import {HiArrowLongLeft} from 'react-icons/hi2'
 import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
-export default class infodetails extends Component {
-    constructor(){
-        super();
-        this.state = {
-           
-        }
+export default function infodetails () {
+
+    const navigate = useNavigate();
+
+    const backwards = () =>{
+        navigate('/travelers')
     }
-    
-   
 
-  render() {
     return (
       <div className='row'>
         <div className='col-md-4  dream'>
@@ -164,7 +162,7 @@ export default class infodetails extends Component {
                     </div>
                 </Paper><br/>
                     <div className='p-3 pt-5 d-flex' style={{marginRight:40}}>
-                        <button className='btn btn-outline-primary ms-auto ' style={{borderRadius:20,width:100,textDecoration:'none'}}><HiArrowLongLeft/><Link to='' className='text-decoration-none text-primary'>Back</Link></button>
+                        <button onClick={backwards} className='btn btn-outline-primary ms-auto ' style={{borderRadius:20,width:100,textDecoration:'none'}}><HiArrowLongLeft/><Link to='' className='text-decoration-none text-primary'>Back</Link></button>
                         <button className='btn btn-primary ms-4' style={{borderRadius:20,width:100}}><Link to='/confirmation' className='text-white text-decoration-none'>Next</Link> <HiArrowLongRight/></button>
                     </div><br/>
             </div>
@@ -172,4 +170,4 @@ export default class infodetails extends Component {
       </div>
     )
   }
-}
+

@@ -14,8 +14,8 @@ import {FiShoppingCart} from 'react-icons/fi'
 import {AiOutlineHome} from 'react-icons/ai';
 import { Link } from 'react-router-dom';
 
-export default class builddream extends Component {
-  render() {
+export default function builddream () {
+  
     return (
       <div>
         <div className='row'>
@@ -101,4 +101,3 @@ export default class builddream extends Component {
       </div>
     )
   }
-}

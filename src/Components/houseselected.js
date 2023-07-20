@@ -18,8 +18,8 @@ import {HiArrowLongRight} from 'react-icons/hi2';
 import {HiArrowLongLeft} from 'react-icons/hi2';
 import { Link } from 'react-router-dom';
 
-export default class builddream extends Component {
-  render() {
+export default function builddream () {
+
     return (
       <div>
         <div className='row'>
@@ -104,4 +104,4 @@ export default class builddream extends Component {
       </div>
     )
   }
-}
+

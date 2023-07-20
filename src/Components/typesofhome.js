@@ -14,9 +14,15 @@ import {BsBuildings} from 'react-icons/bs';
 import {HiArrowLongRight} from 'react-icons/hi2';
 import {HiArrowLongLeft} from 'react-icons/hi2';
 import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
-export default class builddream extends Component {
-  render() {
+export default function builddream ()  {
+    const navigate = useNavigate();
+
+    const backwards = () =>{
+        navigate('/houseselect')
+
+    }
     return (
       <div>
         <div className='row'>
@@ -103,7 +109,7 @@ export default class builddream extends Component {
                         </div>
                     </div><br/>
                     <div className='p-3 pt-4 d-flex' style={{marginRight:10}}>
-                        <button className='btn btn-outline-primary ms-auto ' style={{borderRadius:20,width:100,textDecoration:'none'}}><HiArrowLongLeft/><Link to='/' className=' text-decoration-none'>Back</Link></button>
+                        <button onClick={backwards} className='btn btn-outline-primary ms-auto ' style={{borderRadius:20,width:100,textDecoration:'none'}}><HiArrowLongLeft/><Link to='/' className=' text-decoration-none'>Back</Link></button>
                         <button className='btn btn-primary ms-4' style={{borderRadius:20,width:100}}><Link to='/propertyusage' className='text-white text-decoration-none' >Next</Link> <HiArrowLongRight/></button>
                     </div><br/>
                 </div>
@@ -112,4 +118,4 @@ export default class builddream extends Component {
       </div>
     )
   }
-}
+
